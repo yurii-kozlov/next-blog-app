@@ -1,8 +1,9 @@
-.marginBottom {
+.main {
   margin-bottom: 5rem;
   @extend %smooth-transition;
 
   @include onMobile {
     margin-bottom: 4rem;
   }
+  min-height: 80vh;
 }

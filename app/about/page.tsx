@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 
 const About: NextPage = (): ReactElement => {
   return (
-    <h3 className={styles.title}>Select subitem</h3>
+    <div className={styles.wrapper}>
+      <h3 className={styles.title}>Select subitem</h3>
+    </div>
   )
 }
 

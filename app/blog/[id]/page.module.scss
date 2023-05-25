@@ -2,6 +2,10 @@
   @extend %title;
 }
 
+.postWrapper {
+  min-height: 70vh;
+}
+
 .postDescription {
   font-size: 1.8rem;
   text-align: center;
