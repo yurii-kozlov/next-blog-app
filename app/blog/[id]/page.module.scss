@@ -1,0 +1,14 @@
+.title {
+  @extend %title;
+}
+
+.postDescription {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0 3rem;
+
+  @extend %smooth-transition;
+  @include onMobile {
+    font-size: 1.4rem;
+  }
+}

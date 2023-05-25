@@ -1,0 +1,8 @@
+.marginBottom {
+  margin-bottom: 5rem;
+  @extend %smooth-transition;
+
+  @include onMobile {
+    margin-bottom: 4rem;
+  }
+}
