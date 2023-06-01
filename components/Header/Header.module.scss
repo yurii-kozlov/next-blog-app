@@ -2,28 +2,3 @@
   background-color: rgb(36, 35, 35);
   padding: 3rem;
 }
-
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  @extend %smooth-transition;
-
-  @include onMobile {
-    gap: 1.5rem;
-  }
-}
-
-.link {
-  font-size: 2rem;
-  color: #fff;
-  @extend %smooth-transition;
-
-  @include onMobile  {
-    font-size: 1.5rem;
-  }
-}
-
-.link:hover {
-  text-decoration: underline;
-}

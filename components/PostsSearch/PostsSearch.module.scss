@@ -1,0 +1,49 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem
+}
+
+.input {
+  @extend %smooth-transition;
+  height: 3.5rem;
+  width: 20rem;
+  border: 0.18rem solid #000;
+  outline: transparent;
+
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+
+  @include onTablet {
+    height: 4rem;
+    width: 22rem;
+  
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.input:focus {
+  border-color: #3498db;
+}
+
+.button {
+  @extend %smooth-transition;
+  height: 3.5rem;
+  width: 7rem;
+  font-size: 1.2rem;
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+
+  @include onTablet {
+    height: 4rem;
+    width: 8rem;
+    font-size: 1.5rem;
+  }
+}
+
+.button:is(:hover, :focus) {
+  background-color: #2b79ad;
+}

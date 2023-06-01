@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  @extend %smooth-transition;
+
+  @include onMobile {
+    gap: 1.5rem;
+  }
+}
+
+.link {
+  font-size: 2rem;
+  color: #fff;
+  @extend %smooth-transition;
+
+  @include onMobile  {
+    font-size: 1.5rem;
+  }
+}
+
+.activeLink {
+  color: #3498db;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

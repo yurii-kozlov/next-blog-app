@@ -1,0 +1,39 @@
+.postsList {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 0 4rem;
+}
+
+.postsListItemLink {
+  font-size: 1.5rem;
+
+  @extend %smooth-transition;
+  @include onMobile {
+    font-size: 1.2rem;
+  }
+}
+
+.postsListItemLink:is(:hover,:focus) {
+  text-decoration: underline;
+}
+
+.postsListItem:not(:last-child) {
+  margin-bottom: 0.9rem;
+}
+
+.loadingInfo {
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.postsInfo {
+  font-size: 1.7rem;
+  text-align: center;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    font-size: 2rem;
+  }
+}

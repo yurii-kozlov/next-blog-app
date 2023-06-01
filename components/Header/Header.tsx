@@ -1,15 +1,18 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
+import { Navigation } from 'components/Navigation';
+import { NavLink } from 'types/NavLink';
 import styles from 'components/Header/Header.module.scss';
-import Link from "next/link";
+
+const navItems: NavLink [] = [
+  { label: "Home", href: "/" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+]
 
 export const Header = (): ReactElement => {
   return (
     <header className={styles.header}>
-      <nav className={styles.navigation}>
-        <Link className={styles.link} href="/">Home</Link>
-        <Link className={styles.link} href="/blog">Blog</Link>
-        <Link className={styles.link} href="/about">About</Link>
-      </nav>
+      <Navigation navLinks={navItems} />
     </header>
   );
 };
