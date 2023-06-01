@@ -1,5 +1,6 @@
-import { Metadata } from "next";
-import { Post } from "types/Post";
+import { Metadata } from 'next';
+import { Post } from 'types/Post';
+import PostsService from 'services/PostsService';
 import styles from 'app/blog/[id]/page.module.scss';
 
 type PostProps = {
@@ -10,24 +11,12 @@ type PostProps = {
 
 const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-async function getPostData(id: string): Promise<Post> {
-  const response = await fetch(`${baseURL}/posts/${id}`, {
-    next: {
-      revalidate: 60
-    }
-  });
 
-  if (!response.ok) {
-    throw new Error('Unable to fetch posts!');
-  }
-
-  return response.json();
-}
 
 export async function generateMetadata({
   params: { id },
 }: PostProps): Promise<Metadata> {
-  const post = await getPostData(id);
+  const post = await PostsService.getPostData(id);
 
   return {
     title: post.title,
@@ -35,7 +24,7 @@ export async function generateMetadata({
 }
 
 export default async function Post({ params: { id } }: PostProps) {
-  const post = await getPostData(id);
+  const post = await PostsService.getPostData(id);
 
   return (
     <div className={styles.postWrapper}>
