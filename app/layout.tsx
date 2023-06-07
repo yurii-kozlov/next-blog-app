@@ -7,8 +7,8 @@ import { Providers } from 'store/provider';
 import styles from 'app/layout.module.scss';
 
 const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({ 
-  subsets: ['latin'], 
+const roboto = Roboto({
+  subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
   style: 'normal'
 });
@@ -20,15 +20,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  modal: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
         <Header />
         <main className={styles.main}>
-          <Providers>{children}</Providers>
+          <Providers>
+            {modal}
+            {children}
+          </Providers>
         </main>
         <Footer />
       </body>

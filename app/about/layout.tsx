@@ -3,9 +3,11 @@ import styles from 'app/about/layout.module.scss';
 import Link from "next/link";
 
 export default function AboutLayout({
-  children
+  children,
+  parallelRouting
 }: {
-  children: ReactNode
+  children: ReactNode,
+  parallelRouting: ReactNode
 }) {
   return (
     <div className={styles.aboutLayout}>
@@ -22,6 +24,9 @@ export default function AboutLayout({
           </Link>
         </li>
       </ul>
+      <div className={styles.wrapperForParallelRouter}>
+        {parallelRouting}
+      </div>
       {children}
     </div>
   )
