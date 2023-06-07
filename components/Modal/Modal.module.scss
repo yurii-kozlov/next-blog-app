@@ -1,0 +1,32 @@
+.modalWrapper {
+  @extend %smooth-transition;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .75);
+}
+
+.modalContent {
+  width: 70vw;
+  height: 40vh;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 2rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    width: 50vw;
+    height: 50vh;
+    font-size: 2rem;
+  }
+}
