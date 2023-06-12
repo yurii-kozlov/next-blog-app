@@ -3,7 +3,7 @@ import './globals.scss'
 import { Inter, Roboto } from 'next/font/google';
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
-import { Providers } from 'store/Provider';
+import { Providers } from 'store/Providers';
 import styles from 'app/layout.module.scss';
 
 const inter = Inter({ subsets: ['latin'] })
