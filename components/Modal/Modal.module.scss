@@ -8,13 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: colorBlack3;
 }
 
 .modalContent {
   width: 70vw;
   height: 40vh;
-  background-color: #fff;
+  background-color: $colorWhite;
   border-radius: 0.7rem;
   display: flex;
   justify-content: center;

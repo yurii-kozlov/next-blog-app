@@ -1,0 +1,34 @@
+.title {
+  @extend %title;
+}
+
+.email {
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  max-width: 12rem;
+  min-height: 12rem;
+  margin: 0 auto;
+  @extend %smooth-transition;
+
+  @include onTablet {
+    max-width: 15rem;
+    min-height: 15rem;
+  }
+}
+
+.userImage {
+  width: 100%;
+  border-radius: 50%;
+}

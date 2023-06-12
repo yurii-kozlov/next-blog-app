@@ -1,7 +1,7 @@
 %title {
   font-size: 3rem;
   font-weight: 700;
-  color: #000;
+  color: $colorBlack;
   text-align: center;
   padding: 3rem;
 
@@ -10,8 +10,50 @@
   @include onMobile {
     font-size: 2.5rem;
   }
+
+  font-family: $mainFontFamily;
 }
 
 %smooth-transition {
   transition: all 0.3s ease-in-out;
+}
+
+%buttonBlue {
+  @extend %smooth-transition;
+  font-size: 1.2rem;
+  background-color: $colorBlue;
+  border: none;
+  color: $colorWhite;
+
+  @include onTablet {
+    font-size: 1.5rem;
+  }
+  font-family: $mainFontFamily;
+}
+
+%buttonBlue:is(:hover, :focus) {
+  background-color: $colorBlue2;
+}
+
+%input {
+  @extend %smooth-transition;
+  height: 3.5rem;
+  width: 20rem;
+  border: 0.18rem solid $colorBlack;
+  outline: transparent;
+
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+
+  @include onTablet {
+    height: 4rem;
+    width: 22rem;
+  
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+%input:focus {
+  border-color: $colorBlue;
 }

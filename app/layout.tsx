@@ -3,7 +3,7 @@ import './globals.scss'
 import { Inter, Roboto } from 'next/font/google';
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
-import { Providers } from 'store/provider';
+import { Providers } from 'store/Provider';
 import styles from 'app/layout.module.scss';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Header />
-        <main className={styles.main}>
-          <Providers>
+        <Providers>
+          <Header />
+          <main className={styles.main}>
             {modal}
             {children}
-          </Providers>
-        </main>
-        <Footer />
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
