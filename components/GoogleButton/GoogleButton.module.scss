@@ -1,0 +1,12 @@
+.button {
+  @extend %buttonBlue;
+  height: 3.7rem;
+  width: 16rem;
+  font-size: 1.5rem;
+
+  @include onTablet {
+    height: 4rem;
+    width: 18rem;
+    font-size: 1.7rem;
+  }
+}

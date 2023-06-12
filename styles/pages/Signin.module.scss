@@ -1,0 +1,24 @@
+.title {
+  @extend %title;
+}
+
+.signinContentWrapper {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+
+.additionalOption {
+  @extend %smooth-transition;
+  font-size: 2rem;
+  
+  @include onTablet {
+    font-size: 2.5rem;
+  }
+}

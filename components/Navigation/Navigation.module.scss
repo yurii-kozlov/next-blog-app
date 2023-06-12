@@ -1,28 +1,46 @@
-.navigation {
+.block {
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
   @extend %smooth-transition;
 
-  @include onMobile {
-    gap: 1.5rem;
+  @include onTablet {
+    gap: 5rem;
   }
 }
 
 .link {
   font-size: 2rem;
-  color: #fff;
+  color: $colorWhite;
   @extend %smooth-transition;
 
-  @include onMobile  {
+  @include onMobile {
     font-size: 1.5rem;
   }
 }
 
+
 .activeLink {
-  color: #3498db;
+  color: $colorBlue;
 }
 
 .link:hover {
+  text-decoration: underline;
+}
+
+.signOutButton {
+  font-size: 2rem;
+  color: $colorWhite;
+  @extend %smooth-transition;
+
+  @include onMobile {
+    font-size: 1.5rem;
+  }
+  background-color: transparent;
+  border: none;
+}
+
+.signOutButton:hover {
   text-decoration: underline;
 }

@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
+import { SessionProvider } from 'next-auth/react';
 import store from 'store/store';
 
 type ProvidersProps = {
@@ -9,5 +10,11 @@ type ProvidersProps = {
 }
 
 export function Providers({ children }: ProvidersProps) {
-  return <Provider store={store}>{children}</Provider>
+  return (
+    <Provider store={store}>
+      <SessionProvider>
+        {children}
+      </SessionProvider>
+    </Provider>
+  )
 }

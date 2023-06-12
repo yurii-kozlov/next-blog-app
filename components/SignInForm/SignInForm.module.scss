@@ -1,0 +1,79 @@
+.formWrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.inputWrapper {
+  max-width: 20rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    max-width: 22rem;
+  }
+}
+
+.input {
+  @extend %input;
+  margin-bottom: 0.1rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.buttonSubmit {
+  @extend %buttonBlue;
+
+  height: 3.7rem;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+
+  @include onTablet {
+    height: 4rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.inputError {
+  color: $colorRedError;
+
+  @extend %smooth-transition;
+  font-size: 1rem;
+
+  @include onTablet {
+    font-size: 1.3rem;
+  }
+  
+  max-width: 100%;
+}
+
+.submitButtonAndSignInErrorWrapper {
+  max-width: 20rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    max-width: 22rem;
+  }
+}
+
+.signInError {
+  color: $colorWhite;
+  padding: 1rem;
+  text-align: center;
+  background-color: $colorRedError;
+
+  @extend %smooth-transition;
+  font-size: 1rem;
+
+  @include onTablet {
+    font-size: 1.3rem;
+  }
+  
+  max-width: 100%;
+}
