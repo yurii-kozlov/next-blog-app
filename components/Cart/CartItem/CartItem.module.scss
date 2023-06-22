@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: $fontWeightRegular;
+}
+
+.deleteFromCartAndProductQuantityWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 4rem;
+  align-items: flex-end;
+}
+
+.deleteFromCartButton {
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: transparent;
+  border: 0.1rem solid $colorBlack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @extend %smooth-transition;
+}
+
+.deleteFromCartButton:is(:hover,:focus) {
+  background-color: $colorGrey2;
+}
+
+.quantity {
+  font-size: 1.3rem;
+}

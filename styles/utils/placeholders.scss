@@ -57,3 +57,47 @@
 %input:focus {
   border-color: $colorBlue;
 }
+
+%buttonBlue {
+  @extend %smooth-transition;
+  background-color: $colorWhite;
+  cursor: pointer;
+  border-radius: 5rem;
+  color: $colorBlue;
+  border: 0.2rem solid $colorBlue;
+  outline: none;
+  font-style: normal;
+  font-weight: $fontWeightSemiBold;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%buttonGrey {
+  @extend %smooth-transition;
+  background-color: $colorWhite;
+  cursor: pointer;
+  border-radius: 5rem;
+  color: $colorBlack;
+  border: 0.2rem solid $colorBlack;
+  outline: none;
+  font-style: normal;
+  font-weight: $fontWeightSemiBold;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%buttonGrey:is(:hover,:focus) {
+  background-color: $colorGrey3;
+}
+
+%buttonBlue:is(:hover,:focus) {
+  background-color: $colorGreen;
+}

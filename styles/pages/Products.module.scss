@@ -1,0 +1,11 @@
+.title {
+  @extend %title;
+}
+
+.block {
+  @extend %smooth-transition;
+  display: grid;
+  justify-content: center;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}

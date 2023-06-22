@@ -9,21 +9,21 @@ export default class PostsService {
         revalidate: 60
       }
     });
-  
+
     if (!result.ok) {
       throw new Error('Unable to fetch posts!');
     }
-  
+
     return result.json();
   }
 
   static getPostsBySearch = async (searchQuery: string): Promise<Post[]> => {
     const response = await fetch(`${baseURL}/posts?q=${searchQuery}`);
-  
+
     if (!response.ok) {
       throw new Error('Unable to fetch posts.');
     }
-  
+
     return response.json();
   }
 
@@ -33,11 +33,11 @@ export default class PostsService {
         revalidate: 60
       }
     });
-  
+
     if (!response.ok) {
       throw new Error('Unable to fetch posts!');
     }
-  
+
     return response.json();
   }
 };

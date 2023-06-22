@@ -11,8 +11,6 @@ type PostProps = {
 
 const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-
-
 export async function generateMetadata({
   params: { id },
 }: PostProps): Promise<Metadata> {

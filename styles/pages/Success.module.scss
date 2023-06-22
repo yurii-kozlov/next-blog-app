@@ -1,0 +1,11 @@
+.title {
+  @extend %title;
+}
+
+.successfulTitle {
+  color: $colorGreenSuccess;
+}
+
+.errorTitle {
+  color: $colorRedError;
+}

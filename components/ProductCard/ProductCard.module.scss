@@ -1,0 +1,71 @@
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  @extend %smooth-transition;
+  margin-bottom: 0.8rem;
+
+  @include onTablet {
+    margin-bottom: 1rem;
+  }
+}
+
+.block {
+  padding: 1.5rem;
+  border: 0.1rem solid $colorGrey;
+  border-radius: 0.8rem;
+
+  @extend %smooth-transition;
+}
+
+.block:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.name {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: $fontWeightBold;
+
+  @extend %smooth-transition;
+  margin-bottom: 0.6rem;
+
+  @include onTablet {
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+  }
+}
+
+.description {
+  @extend %smooth-transition;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+
+  @include onTablet {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+  }
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.addToCartButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.priceSection {
+  font-weight: $fontWeightBold;
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+}

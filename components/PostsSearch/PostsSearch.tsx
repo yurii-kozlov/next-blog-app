@@ -1,7 +1,7 @@
 'use client';
 import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import { useAppDispatch } from 'store/hooks';
-import * as postsActions from 'features/Posts';
+import * as postsActions from 'store/slices/Posts';
 import styles from 'components/PostsSearch/PostsSearch.module.scss';
 
 export const PostsSearch = (): ReactElement => {

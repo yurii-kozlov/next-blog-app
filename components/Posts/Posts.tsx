@@ -2,7 +2,7 @@
 
 import { ReactElement, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
-import * as postsActions from 'features/Posts';
+import * as postsActions from '@/store/slices/Posts';
 import Link from 'next/link';
 import styles from 'components/Posts/Posts.module.scss';
 
