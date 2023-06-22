@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Post } from 'types/Post';
+import { ReactElement } from 'react';
 import PostsService from 'services/PostsService';
 import styles from 'app/blog/[id]/page.module.scss';
 
@@ -8,8 +8,6 @@ type PostProps = {
     id: string;
   };
 };
-
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export async function generateMetadata({
   params: { id },
@@ -21,7 +19,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Post({ params: { id } }: PostProps) {
+export default async function Post({ params: { id } }: PostProps): Promise<ReactElement> {
   const post = await PostsService.getPostData(id);
 
   return (

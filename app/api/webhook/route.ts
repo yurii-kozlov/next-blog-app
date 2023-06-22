@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
 import { headers } from 'next/headers';
@@ -6,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2022-11-15',
 });
 
-export async function POST(req: NextRequest, res: NextResponse): Promise<Response | NextResponse> {
+export async function POST(req: NextRequest): Promise<Response | NextResponse> {
   const headersList = headers();
 
   if (req.method === 'POST') {

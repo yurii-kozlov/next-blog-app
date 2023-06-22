@@ -1,4 +1,5 @@
 'use client';
+
 import styles from 'components/Loader/Loader.module.scss';
 import { ReactElement } from 'react';
 

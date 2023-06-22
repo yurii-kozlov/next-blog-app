@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 import styles from 'app/blog/loading.module.scss';
 
 const LoadingPosts = (): ReactElement => (

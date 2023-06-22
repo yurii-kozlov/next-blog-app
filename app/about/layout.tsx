@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from 'react';
 import styles from 'app/about/layout.module.scss';
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function AboutLayout({
   children,
@@ -8,7 +8,7 @@ export default function AboutLayout({
 }: {
   children: ReactNode,
   parallelRouting: ReactNode
-}) {
+}): ReactElement {
   return (
     <div className={styles.aboutLayout}>
       <h1 className={styles.title}>About us</h1>
@@ -30,4 +30,4 @@ export default function AboutLayout({
       {children}
     </div>
   )
-}
+};

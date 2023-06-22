@@ -1,9 +1,10 @@
 import { getServerSession } from 'next-auth';
+import { ReactElement } from 'react';
 import { authConfig } from 'configs/auth';
 import styles from 'styles/pages/Profile.module.scss';
 import Image from 'next/image';
 
-export default async function ProfilePage() {
+export default async function ProfilePage(): Promise<ReactElement> {
   const session = await getServerSession(authConfig);
 
   const {

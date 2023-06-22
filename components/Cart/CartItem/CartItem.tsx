@@ -2,7 +2,6 @@
 
 import { FC, ReactElement } from 'react';
 import Image from 'next/image';
-import cn from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useAppDispatch, useAppSelector } from 'store/hooks';

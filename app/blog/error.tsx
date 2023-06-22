@@ -1,5 +1,6 @@
 'use client';
-import { FC, ReactElement } from "react";
+
+import { FC, ReactElement } from 'react';
 import styles from 'app/blog/error.module.scss';
 
 type ErrorProps = {

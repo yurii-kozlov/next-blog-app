@@ -4,15 +4,13 @@ import { NavLink } from 'types/NavLink';
 import styles from 'components/Header/Header.module.scss';
 
 const navItems: NavLink [] = [
-  { label: "Home", href: "/" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" }
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' }
 ]
 
-export const Header = (): ReactElement => {
-  return (
-    <header className={styles.header}>
-      <Navigation navLinks={navItems} />
-    </header>
+export const Header = (): ReactElement => (
+  <header className={styles.header}>
+    <Navigation navLinks={navItems} />
+  </header>
   );
-};

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function GET(req: Request) {
+export async function GET(): Promise<NextResponse> {
   const API_KEY = process.env.OMDB_SECRET;
   const query = 'matrix';
 
