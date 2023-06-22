@@ -15,6 +15,7 @@ export default async function Products() {
       <div className={styles.block}>
         {products.map((product) => {
           const { name, url, description, slug} = product;
+
           return (
             <ProductCard key={slug} product={product}/>
           )
