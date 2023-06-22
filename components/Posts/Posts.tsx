@@ -13,7 +13,7 @@ export const Posts = (): ReactElement => {
 
   useEffect(() => {
     dispatch(postsActions.getPosts());
-  }, [])
+  }, [dispatch])
 
   return isLoading ? (
     <h3 className={styles.loadingInfo}>Loading...</h3>
@@ -28,8 +28,9 @@ export const Posts = (): ReactElement => {
       ) : (
         posts.map((post) => {
           const {id, title } = post;
+
           return (
-            <li key={id} className={styles.postsListItem}>
+            <li className={styles.postsListItem} key={id}>
               <Link className={styles.postsListItemLink} href={`/blog/${id}`}>
                 {title}
               </Link>
@@ -37,6 +38,6 @@ export const Posts = (): ReactElement => {
             )
         })
       ) }
-  </ul>
+    </ul>
   );
 };
