@@ -76,6 +76,23 @@
   justify-content: center;
 }
 
+%buttonBlue2 {
+  @extend %smooth-transition;
+  font-size: 1.2rem;
+  background-color: $colorBlue;
+  border: none;
+  color: $colorWhite;
+
+  @include onTablet {
+    font-size: 1.5rem;
+  }
+  font-family: $mainFontFamily;
+}
+
+%buttonBlue2:is(:hover, :focus) {
+  background-color: $colorBlue2;
+}
+
 %buttonGrey {
   @extend %smooth-transition;
   background-color: $colorWhite;

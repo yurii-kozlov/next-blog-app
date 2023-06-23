@@ -1,14 +1,10 @@
 import { ReactElement } from 'react';
-import ProductsService from 'services/ProductsService';
 import { ProductCard } from 'components/ProductCard';
 import { Container } from 'components/Container';
+import { products } from 'data/products';
 import styles from 'styles/pages/Products.module.scss';
 
-export const revalidate = 60;
-
-export default async function Products(): Promise<ReactElement> {
-  const products = await ProductsService.getProducts();
-
+export default function Products(): ReactElement {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Products</h1>
