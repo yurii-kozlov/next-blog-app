@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { posts } from 'app/api/posts/posts';
 
-export async function GET(req: Request) {
+export async function GET(req: Request): Promise<NextResponse> {
   const { searchParams } = new URL(req.url);
   const query = searchParams.get('q');
 
@@ -16,7 +16,7 @@ export async function GET(req: Request) {
   return NextResponse.json(currentPosts);
 };
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<NextResponse> {
   const body = await req.json();
 
   return NextResponse.json({ body });

@@ -1,10 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 import { headers, cookies } from 'next/headers';
-import { redirect } from "next/navigation";
 
 export async function DELETE(req: Request, { params }: {
   params: {id: string}
-}) {
+}): Promise<NextResponse> {
   const { id }= params;
 
   const headersList = headers();

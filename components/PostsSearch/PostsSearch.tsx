@@ -1,7 +1,8 @@
 'use client';
+
 import { ChangeEvent, FormEvent, ReactElement, useState } from 'react';
 import { useAppDispatch } from 'store/hooks';
-import * as postsActions from 'features/Posts';
+import * as postsActions from 'store/slices/Posts';
 import styles from 'components/PostsSearch/PostsSearch.module.scss';
 
 export const PostsSearch = (): ReactElement => {
@@ -21,19 +22,19 @@ export const PostsSearch = (): ReactElement => {
   return (
     <>
       <form
+        action="#"
         className={styles.form}
         method="get"
-        action="#"
         onSubmit={handleSubmit}
       >
         <input
-          type="search"
           className={styles.input}
-          placeholder="search"
-          value={searchQuery}
           onChange={handleSearchQueryChange}
+          placeholder="search"
+          type="search"
+          value={searchQuery}
         />
-        <button type="submit" className={styles.button}>Search</button>
+        <button className={styles.button} type="submit">Search</button>
       </form>
     </>
   );

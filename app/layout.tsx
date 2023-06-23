@@ -1,12 +1,12 @@
-import { Metadata } from 'next'
-import './globals.scss'
-import { Inter, Roboto } from 'next/font/google';
+import { Metadata } from 'next';
+import { ReactElement, ReactNode } from 'react';
+import './globals.scss';
+import { Roboto } from 'next/font/google';
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 import { Providers } from 'store/Providers';
 import styles from 'app/layout.module.scss';
 
-const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
@@ -22,9 +22,9 @@ export default function RootLayout({
   children,
   modal
 }: {
-  children: React.ReactNode,
-  modal: React.ReactNode
-}) {
+  children: ReactNode,
+  modal: ReactNode
+}): ReactElement {
   return (
     <html lang="en">
       <body className={roboto.className}>

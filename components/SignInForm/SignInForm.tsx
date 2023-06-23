@@ -1,4 +1,5 @@
 'use client';
+
 import { ReactElement, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
@@ -18,7 +19,7 @@ export const SignInForm = (): ReactElement => {
     resolver: yupResolver(signInSchemaValidation)
   });
 
-  const onSubmit = async ({ email, password }: SignInFormInputs) => {
+  const onSubmit = async ({ email, password }: SignInFormInputs): Promise<void> => {
     const response = await signIn('credentials', {
       email,
       password,
@@ -49,8 +50,8 @@ export const SignInForm = (): ReactElement => {
             autoComplete="email"
             {...register('email')}
             className={styles.input}
-            type="email"
             placeholder="Please enter your email"
+            type="email"
           />
           {errors.email && (
             <p className={styles.inputError}>{errors.email.message}</p>
@@ -61,8 +62,8 @@ export const SignInForm = (): ReactElement => {
             autoComplete="current-password"
             {...register('password')}
             className={styles.input}
-            type="password"
             placeholder="Please enter your password"
+            type="password"
           />
           {errors.password && (
             <p className={styles.inputError}>{errors.password.message}</p>

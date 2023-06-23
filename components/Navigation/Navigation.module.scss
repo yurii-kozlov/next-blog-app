@@ -44,3 +44,29 @@
 .signOutButton:hover {
   text-decoration: underline;
 }
+
+.cartButton {
+  @extend %smooth-transition;
+  background-color: transparent;
+  border: none;
+}
+
+.cartButton:is(:hover,:focus) {
+  scale: 1.25;
+}
+
+.iconCart {
+  width: 1.8rem;
+  height: 1.8rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.cartAndCartButtonWrapper {
+  position: relative;
+}

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { FC, ReactElement, ReactNode, useCallback, useEffect, useRef } from "react";
+import { FC, KeyboardEventHandler, ReactElement, ReactNode, useCallback, useEffect } from 'react';
 import styles from 'components/Modal/Modal.module.scss';
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 type ModalProps = {
   children: ReactNode
@@ -27,16 +27,29 @@ export const Modal: FC<ModalProps> = ({ children }): ReactElement => {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [onKeyDown])
 
-  const handleClick = () => router.back();
+  const handleClick = (): void => router.back();
+
+  const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = (event): void => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  }
 
   return (
-    <div 
+    <div
+      aria-label='close popup'
       className={styles.modalWrapper}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
     >
       <div
-        onClick={(e) => e.stopPropagation()}
         className={styles.modalContent}
+        onClick={(e): void => e.stopPropagation()}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
       >
         {children}
       </div>
