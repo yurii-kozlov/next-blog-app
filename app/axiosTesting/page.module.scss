@@ -1,0 +1,28 @@
+.wrapper {
+  padding: 4rem;
+}
+
+.title {
+  @extend %title;
+}
+
+.linksList {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.listItem {
+  @extend %smooth-transition;
+  font-size: 1.5rem;
+
+  @include onTablet {
+    font-size: 2rem;
+  }
+}
+
+.listItem:is(:hover,:focus) {
+  text-decoration: underline;
+}

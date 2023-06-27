@@ -7,7 +7,8 @@ const navItems: NavLink [] = [
   { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
-  { label: 'BlogStatic', href: '/blogStatic'}
+  { label: 'BlogStatic', href: '/blogStatic'},
+  { label: 'Axios Testing', href: '/axiosTesting'}
 ];
 
 export const Header = (): ReactElement => (
