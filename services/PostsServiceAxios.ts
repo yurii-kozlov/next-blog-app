@@ -5,6 +5,9 @@ const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const config = {
   headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Accept-Encoding': 'gzip, deflate, br'
   }
 };
