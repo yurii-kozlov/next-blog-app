@@ -15,6 +15,7 @@ type StaticParam = {
 }
 
 export const revalidate = 100000;
+export const dynamicParams = true
 
 export async function generateStaticParams(): Promise<StaticParam[]> {
   const posts = await PostsService.getPosts();

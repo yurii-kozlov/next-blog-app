@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 100000;
+export const dynamicParams = true
 
 const Blog = async (): Promise<ReactElement> => {
   const posts = await PostsServiceAxios.getPosts();
