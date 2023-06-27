@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
 import styles from 'app/blog/[id]/page.module.scss';
-import PostsServiceAxios from '@/services/PostsServiceAxios';
+import PostsServiceAxios from 'services/PostsServiceAxios';
+import PostsService from 'services/PostsService';
 
 type PostProps = {
   params: {
@@ -16,7 +17,7 @@ type StaticParam = {
 export const revalidate = 100000;
 
 export async function generateStaticParams(): Promise<StaticParam[]> {
-  const posts = await PostsServiceAxios.getPosts();
+  const posts = await PostsService.getPosts();
 
   return posts.map((post) => ({
     id: post.id.toString()
