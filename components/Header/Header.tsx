@@ -6,8 +6,9 @@ import styles from 'components/Header/Header.module.scss';
 const navItems: NavLink [] = [
   { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' }
-]
+  { label: 'About', href: '/about' },
+  { label: 'BlogStatic', href: '/blogStatic'}
+];
 
 export const Header = (): ReactElement => (
   <header className={styles.header}>
