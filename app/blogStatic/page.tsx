@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
-import PostsServiceAxios from 'services/PostsServiceAxios';
+import PostsService from 'services/PostsService';
 import Link from 'next/link';
 import styles from 'app/blogStatic/page.module.scss';
 
@@ -13,7 +13,7 @@ export const revalidate = 100000;
 export const dynamicParams = true
 
 const Blog = async (): Promise<ReactElement> => {
-  const posts = await PostsServiceAxios.getPosts();
+  const posts = await PostsService.getPosts();
 
   return (
     <div className={styles.wrapper}>

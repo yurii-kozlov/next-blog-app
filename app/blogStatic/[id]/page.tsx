@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
-import styles from 'app/blog/[id]/page.module.scss';
 import PostsService from 'services/PostsService';
+import styles from 'app/blog/[id]/page.module.scss';
 
 type PostProps = {
   params: {
