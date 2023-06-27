@@ -24,11 +24,7 @@ export default class PostsService {
   }
 
   static async getPostData(id: string): Promise<Post> {
-    const response = await fetch(`${baseURL}/posts/${id}`, {
-      next: {
-        revalidate: 60
-      }
-    });
+    const response = await fetch(`${baseURL}/posts/${id}`);
 
     if (!response.ok) {
       throw new Error('Unable to fetch posts!');

@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import { ReactElement } from 'react';
 import styles from 'app/blog/[id]/page.module.scss';
-import PostsServiceAxios from 'services/PostsServiceAxios';
 import PostsService from 'services/PostsService';
 
 type PostProps = {
@@ -28,7 +27,7 @@ export async function generateStaticParams(): Promise<StaticParam[]> {
 export async function generateMetadata({
   params: { id },
 }: PostProps): Promise<Metadata> {
-  const post = await PostsServiceAxios.getPostData(id);
+  const post = await PostsService.getPostData(id);
 
   return {
     title: post.title,
@@ -36,7 +35,7 @@ export async function generateMetadata({
 }
 
 export default async function Post({ params: { id } }: PostProps): Promise<ReactElement> {
-  const post = await PostsServiceAxios.getPostData(id);
+  const post = await PostsService.getPostData(id);
 
   return (
     <div className={styles.postWrapper}>
