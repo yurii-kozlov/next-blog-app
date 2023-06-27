@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Post } from 'types/Post';
 
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+// const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const config = {
   headers: {
@@ -12,7 +12,7 @@ const config = {
 export default class PostsServiceAxios {
   static async getPosts(): Promise<Post[]> {
     try {
-      const response = await axios.get(`${baseURL}/posts`, config);
+      const response = await axios.get(`https://jsonplaceholder.typicode.com/posts`, config);
 
       return response.data;
     } catch (error) {
@@ -26,7 +26,7 @@ export default class PostsServiceAxios {
 
   static getPostsBySearch = async (searchQuery: string): Promise<Post[]> => {
     try {
-      const response = await axios.get(`${baseURL}/posts?q=${searchQuery}`, config);
+      const response = await axios.get(`https://jsonplaceholder.typicode.com/posts?q=${searchQuery}`, config);
 
       return response.data;
     } catch (error) {
@@ -40,7 +40,7 @@ export default class PostsServiceAxios {
 
   static async getPostData(id: string): Promise<Post> {
     try {
-      const response = await axios.get(`${baseURL}/posts/${id}`, config);
+      const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`, config);
 
       return response.data;
     } catch (error) {
