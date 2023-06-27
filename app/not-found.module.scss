@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  @extend %title;
+}
+
+.detailedInfo {
+  font-size: 2rem;
+  @extend %smooth-transition;
+
+  @include onTablet {
+    font-size: 2.5rem;
+  }
+}
+
+.link {
+  @extend %smooth-transition;
+  font-weight: $fontWeightBold;
+  color: $colorBlue;
+}
+
+.link:is(:hover,:focus) {
+  text-decoration: underline;
+}

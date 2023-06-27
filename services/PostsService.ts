@@ -4,11 +4,7 @@ const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default class PostsService {
   static async getPosts(): Promise<Post[]> {
-    const result = await fetch(`${baseURL}/posts`, {
-      next: {
-        revalidate: 60
-      }
-    });
+    const result = await fetch(`${baseURL}/posts`);
 
     if (!result.ok) {
       throw new Error('Unable to fetch posts!');
@@ -28,11 +24,7 @@ export default class PostsService {
   }
 
   static async getPostData(id: string): Promise<Post> {
-    const response = await fetch(`${baseURL}/posts/${id}`, {
-      next: {
-        revalidate: 60
-      }
-    });
+    const response = await fetch(`${baseURL}/posts/${id}`);
 
     if (!response.ok) {
       throw new Error('Unable to fetch posts!');

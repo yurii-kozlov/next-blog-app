@@ -1,0 +1,35 @@
+.title {
+  @extend %title;
+}
+
+.postsSearchWrapper {
+  margin-bottom: 2.5rem;
+}
+
+.wrapper {
+  min-height: 70vh;
+  padding: 4rem;
+}
+
+.postsList {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 0 4rem;
+}
+
+.postsListItemLink {
+  font-size: 1.5rem;
+
+  @extend %smooth-transition;
+  @include onMobile {
+    font-size: 1.2rem;
+  }
+}
+
+.postsListItemLink:is(:hover,:focus) {
+  text-decoration: underline;
+}
+
+.postsListItem:not(:last-child) {
+  margin-bottom: 0.9rem;
+}
